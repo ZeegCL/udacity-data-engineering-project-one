@@ -20,14 +20,33 @@ services:
   pgadmin:
     container_name: pgadmin_ui
     image: dpage/pgadmin4
+    depends_on:
+      - postgres
     environment:
       PGADMIN_DEFAULT_EMAIL: student@sparkifydemo.io
       PGADMIN_DEFAULT_PASSWORD: student
     volumes:
        - ./data/pgadmin:/root/.pgadmin
-
     ports:
       - "5050:80"
+    networks:
+      - postgres
+    restart: on-failure
+
+  superset:
+    container_name: superset_ui
+    image: apache/superset
+    depends_on:
+      - postgres
+    environment:
+      FLASK_ENV: production
+      SUPERSET_ENV: production
+      SUPERSET_PORT: 8088
+      PYTHONPATH: /app/pythonpath
+    volumes:
+      - ./data/superset:/app/pythonpath
+    ports:
+      - "8088:8088"
     networks:
       - postgres
     restart: on-failure
