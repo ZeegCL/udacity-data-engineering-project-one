@@ -1,20 +1,22 @@
 # 1. About this project
 
-This is a sample project for the "Data Modeling" module in Udacity's Data Engineering Nanodegree.
+This is a sample project for the "Data Modeling" module in Udacity's Data Engineering Nanodegree. It presents the case of a fictional startup called "Sparkify", which has been collecting data on songs and user activity on their music streaming app. All the data has been stored as JSON files, which gives a hard time for the analytics team.
 
-**Indicators**
+As a data engineer, you are required to build a small data warehouse optimized to analyze the operational data. This includes creating the database schema and the ETL pipeline to import the data from it's source files.
 
-Users
-    - Free vs. paid users
-    - Distribution per gender
-    - Distribution per location
+To demonstrate some analysis that can be done using the transformed data, the following indicators have been included in a demo dashboard:
 
-User activity
-    - Songs played per session
-    - Activity per day of the week
-    - Activity per month
-    - Artists ranking overall
-    - Songs ranking overall
+**Users**
+- Free vs. paid users
+- Distribution per gender
+- Distribution per location
+
+**User activity**
+- Songs played per session
+- Activity per day of the week
+- Activity per month
+- Artists ranking overall
+- Songs ranking overall
 
 # 2. Requirements
 
@@ -25,6 +27,22 @@ To execute all the steps and see the end product, you will need the following in
 - Docker-compose
 - Jupyter Notebook or Jupyter Lab, to check the _.ipynb_ files.
 - A terminal capable of running bash scripts. On Windows you can use Git Bash if you are a Git user.
+
+# 3. Files included in the project
+
+- data folder: Includes all the data for the ETL process and mounting points for the Docker container volumes.
+    - song_data folder: Includes JSON files which contain metadata about songs and their artists.
+    - log_data: Includes JSON files with log events from the music stream app.
+    - superset: Includes a config file for Apache Superset with the URI for the database backend.
+- create_tables.py: 
+- demo_dashboard.json: 
+- docker-compose.yml: 
+- etl.ipynb: 
+- etl.py: 
+- requirements.txt: 
+- sql_queries.py: 
+- superset_init.sh: 
+- test.ipynb: 
 
 # 3. Getting started
 
