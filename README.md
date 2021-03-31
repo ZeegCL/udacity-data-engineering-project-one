@@ -9,14 +9,10 @@ To demonstrate some analysis that can be done using the transformed data, the fo
 **Users**
 - Free vs. paid users
 - Distribution per gender
-- Distribution per location
 
 **User activity**
 - Songs played per session
-- Activity per day of the week
-- Activity per month
-- Artists ranking overall
-- Songs ranking overall
+- Songs played per day of the week
 
 # 2. Requirements
 
@@ -30,21 +26,21 @@ To execute all the steps and see the end product, you will need the following in
 
 # 3. Files included in the project
 
-- data folder: Includes all the data for the ETL process and mounting points for the Docker container volumes.
+- **data folder:** Includes all the data for the ETL process and mounting points for the Docker container volumes.
     - song_data folder: Includes JSON files which contain metadata about songs and their artists.
     - log_data: Includes JSON files with log events from the music stream app.
     - superset: Includes a config file for Apache Superset with the URI for the database backend.
-- create_tables.py: 
-- demo_dashboard.json: 
-- docker-compose.yml: 
-- etl.ipynb: 
-- etl.py: 
-- requirements.txt: 
-- sql_queries.py: 
-- superset_init.sh: 
-- test.ipynb: 
+- **create_tables.py:** Python script that drops and creates the database schema.
+- **demo_dashboard.json:** JSON file with the definition of the demo dashboard. This must be imported into Apache Superset.
+- **docker-compose.yml:** YAML file with the configuration to mount all the services required for this project using Docker containers.
+- **etl.ipynb:** Jupyter notebook that let's you review each step of the ETL process used in this project.
+- **etl.py:** Python script that executes the ETL process.
+- **requirements.txt:** File that lists the Python modules required in this project.
+- **sql_queries.py:** Python script that holds all the SQL queries used in the ETL and Notebook files.
+- **superset_init.sh:** Bash script that initializes the database for Apache Superset and creates the default user.
+- **test.ipynb:** Jupyter notebook that let's you check the data loaded in the database tables.
 
-# 3. Getting started
+# 4. Getting started
 
 This project relays on Docker to quickly run the services needed. In the source code you will find a `docker-compose.yml` file which contains the configuration to run the following: 
 
@@ -52,14 +48,14 @@ This project relays on Docker to quickly run the services needed. In the source 
 2. A PgAdmin instance to help managing the database.
 3. An Apache Superset instance to visualize the data through a dashboard.
 
-## 3.1 Setting up the services
+## 4.1 Setting up the services
 
 1. Open a terminal in the root folder of the project.
 2. Run the following command to start the services: `docker-compose up`
 3. Open another terminal and run the bash script `superset_init.sh` to create and initialize the database, create the default user and load basic configuration for Apache Superset. _Note: the superset_ui container will constantly throw errors in the console until you complete this step._
 
 
-## 3.2 Using PgAdmin to inspect the database
+## 4.2 Using PgAdmin to inspect the database
 
 1. In your web browser go to: [http://localhost:5050](http://localhost:5050)
 2. Log in with the username `student@sparkifydemo.io` and password `student`.
@@ -71,12 +67,12 @@ This project relays on Docker to quickly run the services needed. In the source 
     - Username: student
     - Password: student
     
-## 3.3 Loading the Sparkify database
+## 4.3 Loading the Sparkify database
 
 1. Open a terminal in the root folder and run `python create_tables.py` to create the schema.
 2. To load the data from the _data_ folder, run `python etl.py`.
 
-## 3.4 Visualizing the data through Superset
+## 4.4 Visualizing the data through Superset
 
 1. In your web browser go to: [http://localhost:8088](http://localhost:8088)
 2. Log in with the username `student` and password `student`.
