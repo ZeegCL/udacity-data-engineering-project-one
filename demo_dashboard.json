@@ -1,0 +1,467 @@
+{
+    "dashboards": [
+        {
+            "__Dashboard__": {
+                "css": "",
+                "dashboard_title": "Sparkify Demo",
+                "description": null,
+                "json_metadata": "{\"timed_refresh_immune_slices\": [], \"expanded_slices\": {}, \"refresh_frequency\": 0, \"default_filters\": \"{}\", \"color_scheme\": null, \"remote_id\": 1, \"import_time\": 1617075858}",
+                "position_json": "{\"CHART--pzm83Hphi\":{\"children\":[],\"id\":\"CHART--pzm83Hphi\",\"meta\":{\"chartId\":4,\"height\":50,\"sliceName\":\"Songs played per day of the week\",\"uuid\":\"c046b8c7-acd6-426b-a64a-4810f82097e6\",\"width\":4},\"parents\":[\"ROOT_ID\",\"GRID_ID\",\"ROW-VpGUfcg1p\"],\"type\":\"CHART\"},\"CHART-FzGbD9C3d2\":{\"children\":[],\"id\":\"CHART-FzGbD9C3d2\",\"meta\":{\"chartId\":3,\"height\":50,\"sliceName\":\"Songs played per session\",\"uuid\":\"db2214e9-d166-490a-bf3c-cc9066b7b628\",\"width\":4},\"parents\":[\"ROOT_ID\",\"GRID_ID\",\"ROW-VpGUfcg1p\"],\"type\":\"CHART\"},\"CHART-dljNzAFBXp\":{\"children\":[],\"id\":\"CHART-dljNzAFBXp\",\"meta\":{\"chartId\":2,\"height\":50,\"sliceName\":\"Distribution per gender\",\"uuid\":\"11f6a7a0-cf3e-4d2a-b63c-d85e93d6c883\",\"width\":4},\"parents\":[\"ROOT_ID\",\"GRID_ID\",\"ROW-6vDp8R5f5d\"],\"type\":\"CHART\"},\"CHART-ickHgGnv8I\":{\"children\":[],\"id\":\"CHART-ickHgGnv8I\",\"meta\":{\"chartId\":1,\"height\":50,\"sliceName\":\"Free vs. paid users\",\"uuid\":\"f1e8649a-2ead-48f5-b0b5-0770590469fc\",\"width\":4},\"parents\":[\"ROOT_ID\",\"GRID_ID\",\"ROW-6vDp8R5f5d\"],\"type\":\"CHART\"},\"DASHBOARD_VERSION_KEY\":\"v2\",\"GRID_ID\":{\"children\":[\"HEADER-N43MPJV9-c\",\"ROW-6vDp8R5f5d\",\"HEADER-S-VBiJO4YS\",\"ROW-VpGUfcg1p\"],\"id\":\"GRID_ID\",\"parents\":[\"ROOT_ID\"],\"type\":\"GRID\"},\"HEADER-N43MPJV9-c\":{\"children\":[],\"id\":\"HEADER-N43MPJV9-c\",\"meta\":{\"background\":\"BACKGROUND_TRANSPARENT\",\"headerSize\":\"MEDIUM_HEADER\",\"text\":\"Users\"},\"parents\":[\"ROOT_ID\",\"GRID_ID\"],\"type\":\"HEADER\"},\"HEADER-S-VBiJO4YS\":{\"children\":[],\"id\":\"HEADER-S-VBiJO4YS\",\"meta\":{\"background\":\"BACKGROUND_TRANSPARENT\",\"headerSize\":\"MEDIUM_HEADER\",\"text\":\"User activity\"},\"parents\":[\"ROOT_ID\",\"GRID_ID\"],\"type\":\"HEADER\"},\"HEADER_ID\":{\"id\":\"HEADER_ID\",\"meta\":{\"text\":\"Sparkify Demo\"},\"type\":\"HEADER\"},\"ROOT_ID\":{\"children\":[\"GRID_ID\"],\"id\":\"ROOT_ID\",\"type\":\"ROOT\"},\"ROW-6vDp8R5f5d\":{\"children\":[\"CHART-ickHgGnv8I\",\"CHART-dljNzAFBXp\"],\"id\":\"ROW-6vDp8R5f5d\",\"meta\":{\"background\":\"BACKGROUND_TRANSPARENT\"},\"parents\":[\"ROOT_ID\",\"GRID_ID\"],\"type\":\"ROW\"},\"ROW-VpGUfcg1p\":{\"children\":[\"CHART-FzGbD9C3d2\",\"CHART--pzm83Hphi\"],\"id\":\"ROW-VpGUfcg1p\",\"meta\":{\"0\":\"ROOT_ID\",\"background\":\"BACKGROUND_TRANSPARENT\"},\"parents\":[\"ROOT_ID\",\"GRID_ID\"],\"type\":\"ROW\"}}",
+                "slices": [
+                    {
+                        "__Slice__": {
+                            "cache_timeout": null,
+                            "datasource_name": "public.users_levels",
+                            "datasource_type": "table",
+                            "id": 1,
+                            "params": "{\"adhoc_filters\": [], \"bar_stacked\": false, \"bottom_margin\": \"auto\", \"color_scheme\": \"supersetColors\", \"columns\": [], \"datasource\": \"1__table\", \"extra_form_data\": {\"append_form_data\": {}, \"custom_form_data\": {}, \"override_form_data\": {}}, \"groupby\": [\"level\"], \"label_colors\": {}, \"metrics\": [\"count\"], \"order_desc\": true, \"row_limit\": 1000, \"show_bar_value\": true, \"show_controls\": false, \"show_legend\": false, \"slice_id\": 1, \"time_range\": \"No filter\", \"time_range_endpoints\": [\"inclusive\", \"exclusive\"], \"url_params\": {}, \"viz_type\": \"dist_bar\", \"x_ticks_layout\": \"auto\", \"y_axis_bounds\": [null, null], \"y_axis_format\": \"SMART_NUMBER\", \"remote_id\": 1, \"datasource_name\": \"users_levels\", \"schema\": \"public\", \"database_name\": \"sparkifydb\"}",
+                            "slice_name": "Free vs. paid users",
+                            "viz_type": "dist_bar"
+                        }
+                    },
+                    {
+                        "__Slice__": {
+                            "cache_timeout": null,
+                            "datasource_name": "public.users_genders",
+                            "datasource_type": "table",
+                            "id": 2,
+                            "params": "{\"adhoc_filters\": [], \"bottom_margin\": \"auto\", \"color_scheme\": \"supersetColors\", \"columns\": [], \"datasource\": \"2__table\", \"extra_form_data\": {\"append_form_data\": {}, \"custom_form_data\": {}, \"override_form_data\": {}}, \"groupby\": [\"gender\"], \"label_colors\": {}, \"metrics\": [\"count\"], \"order_desc\": true, \"row_limit\": 1000, \"show_bar_value\": true, \"time_range\": \"No filter\", \"time_range_endpoints\": [\"inclusive\", \"exclusive\"], \"viz_type\": \"dist_bar\", \"x_ticks_layout\": \"auto\", \"y_axis_bounds\": [null, null], \"y_axis_format\": \"SMART_NUMBER\", \"remote_id\": 2, \"datasource_name\": \"users_genders\", \"schema\": \"public\", \"database_name\": \"sparkifydb\"}",
+                            "slice_name": "Distribution per gender",
+                            "viz_type": "dist_bar"
+                        }
+                    },
+                    {
+                        "__Slice__": {
+                            "cache_timeout": null,
+                            "datasource_name": "public.songplays_per_session",
+                            "datasource_type": "table",
+                            "id": 3,
+                            "params": "{\"adhoc_filters\": [], \"datasource\": \"3__table\", \"extra_form_data\": {\"append_form_data\": {}, \"custom_form_data\": {}, \"override_form_data\": {}}, \"header_font_size\": 0.4, \"metric\": {\"aggregate\": \"AVG\", \"column\": {\"column_name\": \"count\", \"description\": null, \"expression\": null, \"filterable\": true, \"groupby\": true, \"id\": 6, \"is_dttm\": false, \"python_date_format\": null, \"type\": \"INT\", \"verbose_name\": null}, \"expressionType\": \"SIMPLE\", \"hasCustomLabel\": false, \"isNew\": false, \"label\": \"AVG(count)\", \"optionName\": \"metric_aftkjrae3da_4w2ostdm2rr\", \"sqlExpression\": null}, \"subheader\": \"Songs played per session (Average)\", \"subheader_font_size\": 0.15, \"time_range\": \"No filter\", \"time_range_endpoints\": [\"inclusive\", \"exclusive\"], \"viz_type\": \"big_number_total\", \"y_axis_format\": \"SMART_NUMBER\", \"remote_id\": 3, \"datasource_name\": \"songplays_per_session\", \"schema\": \"public\", \"database_name\": \"sparkifydb\"}",
+                            "slice_name": "Songs played per session",
+                            "viz_type": "big_number_total"
+                        }
+                    },
+                    {
+                        "__Slice__": {
+                            "cache_timeout": null,
+                            "datasource_name": "public.songplays_per_weekday",
+                            "datasource_type": "table",
+                            "id": 4,
+                            "params": "{\"adhoc_filters\": [], \"bottom_margin\": \"auto\", \"color_scheme\": \"SUPERSET_DEFAULT\", \"columns\": [], \"contribution\": false, \"datasource\": \"4__table\", \"extra_form_data\": {\"append_form_data\": {}, \"custom_form_data\": {}, \"override_form_data\": {}}, \"groupby\": [\"weekday\", \"Day of the week\"], \"label_colors\": {}, \"metrics\": [{\"aggregate\": \"SUM\", \"column\": {\"column_name\": \"count\", \"description\": null, \"expression\": null, \"filterable\": true, \"groupby\": true, \"id\": 9, \"is_dttm\": false, \"python_date_format\": null, \"type\": \"INT\", \"verbose_name\": null}, \"expressionType\": \"SIMPLE\", \"hasCustomLabel\": false, \"isNew\": false, \"label\": \"SUM(count)\", \"optionName\": \"metric_94i12sqgxt_8ulaab35tu5\", \"sqlExpression\": null}], \"order_bars\": true, \"order_desc\": false, \"row_limit\": 1000, \"show_bar_value\": true, \"slice_id\": 4, \"time_range\": \"No filter\", \"time_range_endpoints\": [\"inclusive\", \"exclusive\"], \"timeseries_limit_metric\": [], \"url_params\": {}, \"viz_type\": \"dist_bar\", \"x_axis_label\": \"Days of the week\", \"x_ticks_layout\": \"auto\", \"y_axis_bounds\": [null, null], \"y_axis_format\": \"SMART_NUMBER\", \"y_axis_label\": \"Songs played\", \"remote_id\": 4, \"datasource_name\": \"songplays_per_weekday\", \"schema\": \"public\", \"database_name\": \"sparkifydb\"}",
+                            "slice_name": "Songs played per day of the week",
+                            "viz_type": "dist_bar"
+                        }
+                    }
+                ],
+                "slug": null
+            }
+        }
+    ],
+    "datasources": [
+        {
+            "__SqlaTable__": {
+                "cache_timeout": null,
+                "columns": [
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2021-03-31T22:16:39"
+                            },
+                            "column_name": "weekday",
+                            "created_by_fk": 1,
+                            "created_on": {
+                                "__datetime__": "2021-03-31T22:16:39"
+                            },
+                            "description": null,
+                            "expression": null,
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 7,
+                            "is_active": true,
+                            "is_dttm": false,
+                            "python_date_format": null,
+                            "table_id": 4,
+                            "type": "INT",
+                            "uuid": "b736e02b-f1c9-46e1-ad17-ad00e8de0b39",
+                            "verbose_name": null
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2021-03-31T22:16:39"
+                            },
+                            "column_name": "Day of the week",
+                            "created_by_fk": 1,
+                            "created_on": {
+                                "__datetime__": "2021-03-31T22:16:39"
+                            },
+                            "description": null,
+                            "expression": null,
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 8,
+                            "is_active": true,
+                            "is_dttm": false,
+                            "python_date_format": null,
+                            "table_id": 4,
+                            "type": "STRING",
+                            "uuid": "9ccc1462-368d-42ba-b136-2d2c60887f0e",
+                            "verbose_name": null
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2021-03-31T22:16:39"
+                            },
+                            "column_name": "count",
+                            "created_by_fk": 1,
+                            "created_on": {
+                                "__datetime__": "2021-03-31T22:16:39"
+                            },
+                            "description": null,
+                            "expression": null,
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 9,
+                            "is_active": true,
+                            "is_dttm": false,
+                            "python_date_format": null,
+                            "table_id": 4,
+                            "type": "INT",
+                            "uuid": "ec4b21b7-b1b2-4518-b2f2-ef657ca6a819",
+                            "verbose_name": null
+                        }
+                    }
+                ],
+                "database_id": 1,
+                "default_endpoint": null,
+                "description": null,
+                "extra": null,
+                "fetch_values_predicate": null,
+                "filter_select_enabled": false,
+                "main_dttm_col": null,
+                "metrics": [
+                    {
+                        "__SqlMetric__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2021-03-31T22:16:39"
+                            },
+                            "created_by_fk": 1,
+                            "created_on": {
+                                "__datetime__": "2021-03-31T22:16:39"
+                            },
+                            "d3format": null,
+                            "description": null,
+                            "expression": "count(*)",
+                            "extra": null,
+                            "id": 4,
+                            "metric_name": "count",
+                            "metric_type": null,
+                            "table_id": 4,
+                            "uuid": "1a07679f-8c7d-4853-b5de-164fd56e267d",
+                            "verbose_name": null,
+                            "warning_text": null
+                        }
+                    }
+                ],
+                "offset": 0,
+                "params": "{\"remote_id\": 4, \"database_name\": \"sparkifydb\"}",
+                "schema": "public",
+                "sql": "SELECT t.weekday, to_char(sp.start_time, 'Day') \"Day of the week\", COUNT(sp.songplay_id)\nFROM songplays sp \nJOIN time t on sp.start_time = t.start_time \ngroup by t.weekday, to_char(sp.start_time, 'Day')\norder by t.weekday",
+                "table_name": "songplays_per_weekday",
+                "template_params": null
+            }
+        },
+        {
+            "__SqlaTable__": {
+                "cache_timeout": null,
+                "columns": [
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2021-03-30T03:44:18"
+                            },
+                            "column_name": "user_id",
+                            "created_by_fk": 1,
+                            "created_on": {
+                                "__datetime__": "2021-03-30T03:44:18"
+                            },
+                            "description": null,
+                            "expression": null,
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 1,
+                            "is_active": true,
+                            "is_dttm": false,
+                            "python_date_format": null,
+                            "table_id": 1,
+                            "type": "INT",
+                            "uuid": "4f252038-b61a-4449-9272-53ea589b699b",
+                            "verbose_name": null
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2021-03-30T03:44:18"
+                            },
+                            "column_name": "level",
+                            "created_by_fk": 1,
+                            "created_on": {
+                                "__datetime__": "2021-03-30T03:44:18"
+                            },
+                            "description": null,
+                            "expression": null,
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 2,
+                            "is_active": true,
+                            "is_dttm": false,
+                            "python_date_format": null,
+                            "table_id": 1,
+                            "type": "STRING",
+                            "uuid": "2f81cb7b-9be7-44dd-9eec-9960a48fdecb",
+                            "verbose_name": null
+                        }
+                    }
+                ],
+                "database_id": 1,
+                "default_endpoint": null,
+                "description": null,
+                "extra": null,
+                "fetch_values_predicate": null,
+                "filter_select_enabled": false,
+                "main_dttm_col": null,
+                "metrics": [
+                    {
+                        "__SqlMetric__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2021-03-30T03:44:18"
+                            },
+                            "created_by_fk": 1,
+                            "created_on": {
+                                "__datetime__": "2021-03-30T03:44:18"
+                            },
+                            "d3format": null,
+                            "description": null,
+                            "expression": "count(*)",
+                            "extra": null,
+                            "id": 1,
+                            "metric_name": "count",
+                            "metric_type": null,
+                            "table_id": 1,
+                            "uuid": "f8841eb9-85ac-4e43-8d21-f9fce93a59b0",
+                            "verbose_name": null,
+                            "warning_text": null
+                        }
+                    }
+                ],
+                "offset": 0,
+                "params": "{\"remote_id\": 1, \"database_name\": \"sparkifydb\", \"import_time\": 1617075858}",
+                "schema": "public",
+                "sql": "SELECT user_id, level from users",
+                "table_name": "users_levels",
+                "template_params": null
+            }
+        },
+        {
+            "__SqlaTable__": {
+                "cache_timeout": null,
+                "columns": [
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2021-03-31T03:51:37"
+                            },
+                            "column_name": "user_id",
+                            "created_by_fk": 1,
+                            "created_on": {
+                                "__datetime__": "2021-03-31T03:51:37"
+                            },
+                            "description": null,
+                            "expression": null,
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 3,
+                            "is_active": true,
+                            "is_dttm": false,
+                            "python_date_format": null,
+                            "table_id": 2,
+                            "type": "INT",
+                            "uuid": "130cc2d8-3db9-4541-9f00-6971c4183fc8",
+                            "verbose_name": null
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2021-03-31T03:51:37"
+                            },
+                            "column_name": "gender",
+                            "created_by_fk": 1,
+                            "created_on": {
+                                "__datetime__": "2021-03-31T03:51:37"
+                            },
+                            "description": null,
+                            "expression": null,
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 4,
+                            "is_active": true,
+                            "is_dttm": false,
+                            "python_date_format": null,
+                            "table_id": 2,
+                            "type": "STRING",
+                            "uuid": "e20092f0-6ff7-426e-83a8-5907c97092ce",
+                            "verbose_name": null
+                        }
+                    }
+                ],
+                "database_id": 1,
+                "default_endpoint": null,
+                "description": null,
+                "extra": null,
+                "fetch_values_predicate": null,
+                "filter_select_enabled": false,
+                "main_dttm_col": null,
+                "metrics": [
+                    {
+                        "__SqlMetric__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2021-03-31T03:51:37"
+                            },
+                            "created_by_fk": 1,
+                            "created_on": {
+                                "__datetime__": "2021-03-31T03:51:37"
+                            },
+                            "d3format": null,
+                            "description": null,
+                            "expression": "count(*)",
+                            "extra": null,
+                            "id": 2,
+                            "metric_name": "count",
+                            "metric_type": null,
+                            "table_id": 2,
+                            "uuid": "97d57bdd-9303-497d-b5f0-9e0f6cce34e1",
+                            "verbose_name": null,
+                            "warning_text": null
+                        }
+                    }
+                ],
+                "offset": 0,
+                "params": "{\"remote_id\": 2, \"database_name\": \"sparkifydb\"}",
+                "schema": "public",
+                "sql": "SELECT user_id, gender from users",
+                "table_name": "users_genders",
+                "template_params": null
+            }
+        },
+        {
+            "__SqlaTable__": {
+                "cache_timeout": null,
+                "columns": [
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2021-03-31T21:48:54"
+                            },
+                            "column_name": "session_id",
+                            "created_by_fk": 1,
+                            "created_on": {
+                                "__datetime__": "2021-03-31T21:48:54"
+                            },
+                            "description": null,
+                            "expression": null,
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 5,
+                            "is_active": true,
+                            "is_dttm": false,
+                            "python_date_format": null,
+                            "table_id": 3,
+                            "type": "INT",
+                            "uuid": "6ddb5334-055e-4fcc-8429-819644c0d9a2",
+                            "verbose_name": null
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2021-03-31T21:48:54"
+                            },
+                            "column_name": "count",
+                            "created_by_fk": 1,
+                            "created_on": {
+                                "__datetime__": "2021-03-31T21:48:54"
+                            },
+                            "description": null,
+                            "expression": null,
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 6,
+                            "is_active": true,
+                            "is_dttm": false,
+                            "python_date_format": null,
+                            "table_id": 3,
+                            "type": "INT",
+                            "uuid": "d81a2013-9047-4856-8fe4-6a034c572ed0",
+                            "verbose_name": null
+                        }
+                    }
+                ],
+                "database_id": 1,
+                "default_endpoint": null,
+                "description": null,
+                "extra": null,
+                "fetch_values_predicate": null,
+                "filter_select_enabled": false,
+                "main_dttm_col": null,
+                "metrics": [
+                    {
+                        "__SqlMetric__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2021-03-31T21:48:54"
+                            },
+                            "created_by_fk": 1,
+                            "created_on": {
+                                "__datetime__": "2021-03-31T21:48:54"
+                            },
+                            "d3format": null,
+                            "description": null,
+                            "expression": "count(*)",
+                            "extra": null,
+                            "id": 3,
+                            "metric_name": "count",
+                            "metric_type": null,
+                            "table_id": 3,
+                            "uuid": "4db40902-339a-4d4b-8e95-0fcbe9e7e16f",
+                            "verbose_name": null,
+                            "warning_text": null
+                        }
+                    }
+                ],
+                "offset": 0,
+                "params": "{\"remote_id\": 3, \"database_name\": \"sparkifydb\"}",
+                "schema": "public",
+                "sql": "SELECT session_id, COUNT (songplay_id) FROM songplays GROUP BY session_id",
+                "table_name": "songplays_per_session",
+                "template_params": null
+            }
+        }
+    ]
+}
