@@ -6,6 +6,26 @@ from sql_queries import *
 
 
 def process_song_file(cur, filepath):
+    """
+    Reads the contents of a JSON file for a given filepath. Then extracts the song data and inserts
+    it to the "songs" table. Finally, extracts the artist data and inserts it in the "artists" table.
+    
+    Parameters
+    ----------
+    
+    cur : cursor
+        Cursor connected to the database where data will be inserted
+    
+    filepath : string 
+        Path of the file to be read
+    
+    Returns
+    -------
+    
+    None
+    
+    """
+    
     # open song file
     df = pd.read_json(filepath, lines=True)
 
@@ -19,6 +39,26 @@ def process_song_file(cur, filepath):
 
 
 def process_log_file(cur, filepath):
+    """
+    Reads the contents of a JSON file for a given filepath. Then extracts the song data and inserts
+    it to the "songs" table. Finally, extracts the artist data and inserts it in the "artists" table.
+    
+    Parameters
+    ----------
+    
+    cur : cursor
+        Cursor connected to the database where data will be loaded
+    
+    filepath : string 
+        Path of the file to be read
+    
+    Returns
+    -------
+    
+    None
+    
+    """
+    
     # open log file
     df = pd.read_json(filepath, lines='True')
 
@@ -61,6 +101,33 @@ def process_log_file(cur, filepath):
 
 
 def process_data(cur, conn, filepath, func):
+    """
+    This function lists all the files in a folder, and then processes each of them using
+    the anonymous function passed in the parameters.
+    
+    Parameters
+    ----------
+    
+    cur : cursor
+        Cursor connected to the database where data will be loaded. It will be passed to the 
+        anonymous function "func".
+    
+    conn : connection
+        Connection to the database that will be used to commit each transaction.
+    
+    filepath : string
+        Path to the folder that will be processed.
+        
+    func : function
+        Anonymous function that will be used to process each file in the "filepath".
+        
+    Returns
+    -------
+    
+    None
+    
+    """
+    
     # get all files matching extension from directory
     all_files = []
     for root, dirs, files in os.walk(filepath):
@@ -80,6 +147,23 @@ def process_data(cur, conn, filepath, func):
 
 
 def main():
+    """
+    Starting point for the ETL process. It connects to the database and creates the cursor
+    that will be used in the different tasks. Then processes the song_data and log_data folders.
+    Finally, it closes the connection with the database.
+    
+    Parameters
+    ----------
+    
+    None
+    
+    Returns
+    -------
+    
+    None
+    
+    """
+    
     conn = psycopg2.connect("host=127.0.0.1 dbname=sparkifydb user=student password=student")
     cur = conn.cursor()
 
